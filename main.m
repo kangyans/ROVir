@@ -35,7 +35,7 @@ nv = length(Ds(find(Ds > max(Ds)*0.05)));
 kw = reshape(reshape(DATA, [nx*ny, nc])*V(:, 1:nv), [nx, ny, nv]);
 nIMs = ifft2c(kw);
 
-ROVir = sos(nIMs(:,:,1:nv));
+ROVir = sos(nIMs);
 
 figure(100), imshow(abs(ROVir),[])
 
